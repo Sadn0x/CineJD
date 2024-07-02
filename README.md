@@ -1,30 +1,44 @@
-# React + TypeScript + Vite
+# Projeto CineJD Juventude Digital
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto sendo desenvolvido para exibição de aula prática sobre a estrutura de uma aplicação criada para listar os filmes disponíveis no cinema.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **Vite**: Ferramenta de build extremamente rápida e moderna.
+- **TailwindCSS**: Está sendo utilizado a biblioteca do tailwind puro.
 
-## Expanding the ESLint configuration
+## Membros 
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+ - Alairton
+ - Anna
+ - Arthur
+ - Sidney
+ - Tiago Pascoal
 
-- Configure the top-level `parserOptions` property like this:
+## Pré-requisitos
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Antes de começar, certifique-se de ter o Node.js e npm instalados em sua máquina.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
+
+## Como Rodar o Projeto
+
+1. **Clone o repositório**:
+   git clone https://github.com/Sadn0x/CineJD.git
+   cd cineJD
+
+2. **Instale as dependências:**:
+   npm install
+  
+3. **Inicie o servidor de desenvolvimento:**:
+   npm run dev
+
+4. **Acesse a aplicação:**:
+   Abra seu navegador e vá para http://localhost:5173
+
+## Outros
+
+## Print do Projeto
+
