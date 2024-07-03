@@ -112,6 +112,8 @@ const MovieDetails: React.FC = () => {
 
   const selectedTheaterObj = theaters.find(theater => theater.id === selectedTheater);
 
+
+  console.log(theaters);
   return (
     <div className="container mx-auto p-5">
       {movie ? (

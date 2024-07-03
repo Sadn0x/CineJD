@@ -26,6 +26,7 @@ app.get('/api/movies/:id', async (req, res) => {
   try {
     const response = await axios.get(`${BASE_URL}/v0/events/${id}/partnership/home`);
     res.json(response.data);
+    
   } catch (error) {
     console.error('Erro ao buscar os detalhes do filme:', error);
     res.status(500).send('Erro ao buscar os detalhes do filme');
