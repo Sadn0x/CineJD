@@ -9,7 +9,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #151515;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,3 +17,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.marginTop-25 {
+  margin-top: -35px;
+}
+
+.height-30rem {
+  height: 30rem;
+}
+
+.badge {
+  background-color: #151515;
+}
+
+.hidden-scroll-x {
+ ::-webkit-scrollbar {
+  display: none;
+ }
+}
