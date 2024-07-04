@@ -20,7 +20,7 @@ const Navigation : React.FC = () => {
                 <img src={Local} className="size-6"/>
                 <span className="text-white">Local</span>
             </Link>
-            <Link to="/" className="flex flex-col items-center">
+            <Link to="/Account" className="flex flex-col items-center">
                 <img src={Account} className="size-6"/>
                 <span className="text-white">Account</span>
             </Link>
