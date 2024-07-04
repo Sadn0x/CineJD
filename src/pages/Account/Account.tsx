@@ -6,9 +6,9 @@ import RewardsProgress from "./Components/RewardsProgress";
 
 export function Account() {
   return (
-    <div className="pb-10">
-      <div className="flex justify-center items-center h-screen mt-10 mb-10">
-        <div className="w-96 min-w-80 h-screen">
+    <div className="">
+      <div className="flex justify-center items-center h-screen mt-10">
+        <div className="w-9/12 min-w-80 h-screen">
           <h1 className="text-3xl font-bold mb-10 ml-10 mt-10">My Account</h1>
 
           <AccountStats />
@@ -16,10 +16,10 @@ export function Account() {
           <ActiveRewards />
           <RecentlySeen />
           <AccountDetails />
-          
-          
+          <div className="h-20" />
         </div>
       </div>
+      
     </div>
   );
 }
