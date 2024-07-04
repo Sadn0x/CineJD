@@ -46,6 +46,16 @@ app.get('/api/sessions', async (req, res) => {
   }
 });
 
+app.get('/api/theaters', async (req, res) => {
+  try {
+    const response = await axios.get(`${BASE_URL}/v0/cinemas/city/36/partnership/home`);
+    res.json(response.data);
+  } catch (error) {
+    console.error('Erro ao buscar os cinemas:', error);
+    res.status(500).send('Erro ao buscar os cinemas');
+  }
+});
+
 app.listen(port, () => {
   console.log(`Proxy server running at http://localhost:${port}`);
 });
