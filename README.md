@@ -38,6 +38,17 @@ Antes de começar, certifique-se de ter o Node.js e npm instalados em sua máqui
 4. **Acesse a aplicação:**:
    Abra seu navegador e vá para http://localhost:5173
 
+
+## Como Rodar o Back-End do Projeto
+
+1. **Abre um novo terminal de comando**
+
+2. **Entre no diretório do back-end**
+   cd backCineJd
+
+3. **Rode o comando para iniciar o servidor**
+   node index.js
+
 ## Outros
 
 ## Print do Projeto

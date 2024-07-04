@@ -14,6 +14,7 @@
     "@emotion/styled": "^11.11.5",
     "@material-tailwind/react": "^2.1.9",
     "@mui/material": "^5.15.21",
+    "@types/react-leaflet": "^3.0.0",
     "@types/react-router-dom": "^5.3.3",
     "axios": "^1.7.2",
     "leaflet": "^1.9.4",
