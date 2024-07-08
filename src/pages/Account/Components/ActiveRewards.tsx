@@ -17,7 +17,7 @@ function ActiveRewards() {
         <div className="flex justify-between w-screen">
           <span className="self-center">Free Movie Ticket</span>
           <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-            <button className="border rounded-lg p-1 pl-2 pr-2">
+            <button className="border rounded-lg p-1 pl-2 pr-2 hover:bg-white hover:text-gray-900">
               Activate
             </button>
           </a>
@@ -28,13 +28,9 @@ function ActiveRewards() {
         <div className="flex justify-between w-screen">
           <span className="self-center">Free Birthday Popcorn</span>
           <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-            <button
-              
-              className="border rounded-lg p-1 pl-2 pr-2"
-            >
+            <button className="border rounded-lg p-1 pl-2 pr-2 hover:bg-white hover:text-gray-900">
               Activate
             </button>
-            
           </a>
         </div>
       </div>
