@@ -6,6 +6,7 @@ import Navigation from './Components/Navigation';
 import { Account } from './pages/Account/Account';
 import Theaters from './pages/Theaters';
 import MyTickets from './pages/MyTickets/MyTickets';
+import { UpcomingTickets } from './pages/UpcomingTickets/UpcomingTickets';
 
 const App: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const App: React.FC = () => {
           <Route path='/account' element={<Account />} />
           <Route path="/theaters" element={<Theaters/>}/>
           <Route path="/my-tickets" element={<MyTickets/>}/>
+          <Route path="upcoming-tickets" element={<UpcomingTickets/>}/>
         </Routes>
         <Navigation/>
       </Router>

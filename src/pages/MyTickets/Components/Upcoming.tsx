@@ -69,7 +69,7 @@ function Upcoming() {
           <span className="text-gray-400 mb-1">{movie.premiereDate.hour}h</span>
           <div className="w-full text-right">
             <span className="text-right p-2 pl-4 pr-4 rounded-lg text-blue-500 hover:bg-blue-900 hover:text-white">
-              <Link to={`/upcoming-tickets/${movie.id}`}>
+              <Link to={`/upcoming-tickets/`}>
                 <button>View details</button>
               </Link>
             </span>
