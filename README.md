@@ -12,7 +12,7 @@ Projeto sendo desenvolvido para exibição de aula prática sobre a estrutura de
 
  - Alairton
  - Anna
- - Arthur
+ - Artur
  - Sidney
  - Tiago Pascoal
 
