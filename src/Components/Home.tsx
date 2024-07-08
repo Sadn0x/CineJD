@@ -14,6 +14,7 @@ interface Movie {
 
 const Home: React.FC = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
+  const [ moviesComingSoon, setMoviesComingSoon ] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -31,8 +32,24 @@ const Home: React.FC = () => {
       }
     };
 
+    const fetchMoviesComingSoon = async () => {
+        try {
+          const response = await axios.get('http://localhost:5000/api/movies/coming-soon');
+          setMoviesComingSoon(response.data.items);
+          console.log(movies)
+        } catch (error) {
+          console.error('Erro ao buscar os filmes:', error);
+          setError('Erro ao buscar os filmes');
+        } finally {
+          setLoading(false);
+        }
+    }
+
+    fetchMoviesComingSoon();
     fetchMovies();
   }, []);
+
+  console.log(moviesComingSoon)
 
   const truncateSynopsis = (synopsis: string) => {
     return synopsis.length > 200 ? synopsis.substring(0, 200) + '...' : synopsis;
@@ -47,21 +64,21 @@ const Home: React.FC = () => {
   }
 
   return (
-    <div className="container mx-auto p-5">
+    <div className="container mx-auto p-5 mb-16">
       <h1 className="text-4xl font-bold mb-5 text-white">Featured Movies</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      <Carousel
-      className="rounded-xl text-start"
-      showThumbs={false}
-      showStatus={false}
-      infiniteLoop={true}
-      showArrows={false}
-      showIndicators={false}
-      autoPlay={true}
-      interval={3000}
-      swipeable={true}
-      emulateTouch={true}
-    >
+        <Carousel
+          className="rounded-xl text-start"
+          showThumbs={false}
+          showStatus={false}
+          infiniteLoop={true}
+          showArrows={false}
+          showIndicators={false}
+          autoPlay={true}
+          interval={3000}
+          swipeable={true}
+          emulateTouch={true}
+      >
       {movies.map(movie => (
         <div key={movie.id} className="rounded-lg p-4 text-start">
           {movie.inPreSale && (
@@ -87,6 +104,23 @@ const Home: React.FC = () => {
       ))}
     </Carousel>
       </div>
+      <h1 className="text-4xl font-bold mb-5 text-white">Coming Soon</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      {moviesComingSoon.map(movie => (
+        <div key={movie.id} className="rounded-lg p-4 text-start">
+        
+        <div className={movie.inPreSale ? 'marginTop-25' : ''}>
+          <img
+            src={movie.images[0]?.url}
+            alt={movie.title}
+            className="w-full object-cover rounded-2xl height-30rem"
+          />
+          
+          
+        </div>
+      </div>
+      ))}
+    </div>
     </div>
   );
 };

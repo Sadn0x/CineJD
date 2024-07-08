@@ -55,6 +55,16 @@ app.get('/api/theaters', async (req, res) => {
   }
 });
 
+app.get('/api/movies/coming-soon', async (req, res) => {
+  try {
+    const response = await axios.get(`${BASE_URL}/v0/carousel/1/partnership/home?carousels=em-breve`);
+    res.json(response.data[0].events);
+  } catch (error) {
+    console.error('Erro ao buscar os filmes "em breve":', error);
+    res.status(500).send('Erro ao buscar os filmes "em breve"');
+  }
+});
+
 app.listen(port, () => {
   console.log(`Proxy server running at http://localhost:${port}`);
 });
