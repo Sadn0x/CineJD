@@ -12,9 +12,9 @@ const Navigation : React.FC = () => {
                 <img src={Discover} className="size-6"/>
                 <span className="text-white">Discover</span>
             </Link>
-            <Link to="/" className="flex flex-col items-center">
+            <Link to="/my-tickets" className="flex flex-col items-center">
                 <img src={Ticket} className="size-6"/>
-                <span className="text-white">Ticket</span>
+                <span className="text-white">Tickets</span>
             </Link>
             <Link to="/theaters" className="flex flex-col items-center">
                 <img src={Local} className="size-6"/>

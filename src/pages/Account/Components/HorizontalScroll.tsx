@@ -29,7 +29,7 @@ const HorizontalScroll: React.FC = () => {
       }
     };
     fetchMovies();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (loading) {
@@ -40,19 +40,20 @@ const HorizontalScroll: React.FC = () => {
     return <p className="text-center mt-5 text-red-500">{error}</p>;
   }
 
-  
-
   return (
     <div className="horizontal-scroll w-full overflow-x-auto whitespace-nowrap">
       {movies.map((movie) =>
-        !movie.inPreSale &&
-        movie.title !== "A Hora da Estrela" &&
-        movie.title !== "Tudo O Que Você Podia Ser" &&
-        movie.title !== "A Flor Do Buriti" ? (
+        !movie.inPreSale ? (
           <div key={movie.id} className="scroll-content inline-block mb-5">
             <Link to={`/movies/${movie.id}`}>
               <img
-                src={movie.images[0]?.url}
+                src={
+                  movie.title == "A Hora da Estrela" ||
+                  movie.title == "A Flor Do Buriti" ||
+                  movie.title == "Tudo O Que Você Podia Ser"
+                    ? movie.images[1]?.url
+                    : movie.images[0]?.url
+                }
                 alt={movie.title}
                 className="w-48 object-cover rounded-xl mr-4"
               />

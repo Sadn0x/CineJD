@@ -5,6 +5,7 @@ import MovieDetails from './Components/MovieDetails';
 import Navigation from './Components/Navigation';
 import { Account } from './pages/Account/Account';
 import Theaters from './pages/Theaters';
+import MyTickets from './pages/MyTickets/MyTickets';
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
           <Route path="/movies/:id" element={<MovieDetails />} />
           <Route path='/account' element={<Account />} />
           <Route path="/theaters" element={<Theaters/>}/>
+          <Route path="/my-tickets" element={<MyTickets/>}/>
         </Routes>
         <Navigation/>
       </Router>
